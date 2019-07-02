@@ -1,0 +1,31 @@
+
+Tbl : configure
+
+{
+    "action_id" : NumberLong(2),
+    "nm" : "",
+    "type" : "web",
+    "action" : "get_content_location",
+    "data" : {
+        "browser_object" : "[var]browser_handler"
+    },
+    "on_success" : {
+        "return_type" : "None",
+        "save" : [],
+        "next" : {
+            "wait_type" : "timer_delay",
+            "wait_time" : NumberLong(1),
+            "next_action" : NumberLong(2)
+        }
+    },
+    "on_failure" : {
+        "error_handle" : [ 
+            []
+        ]
+    }
+}
+
+
+TBl: ControlTower
+
+"5d1b2c073c75e35d72f7c160" : "Get Content Location"
